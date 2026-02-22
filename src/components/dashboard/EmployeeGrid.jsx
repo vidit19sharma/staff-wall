@@ -17,21 +17,23 @@ const EmployeeGrid = forwardRef(({ rowData, searchText }, ref) => {
 
   const columnDefs = useMemo(
     () => [
-      { field: "id", headerName: "ID", width: 70, filter: "agNumberColumnFilter" },
-      { field: "name", headerName: "Name", minWidth: 160, filter: "agTextColumnFilter" },
-      { field: "email", headerName: "Email", minWidth: 220, filter: "agTextColumnFilter" },
-      { field: "department", headerName: "Department", minWidth: 130, filter: "agTextColumnFilter" },
-      { field: "designation", headerName: "Designation", minWidth: 170, filter: "agTextColumnFilter" },
+      { field: "id", headerName: "ID", minWidth: 80, width: 80, filter: "agNumberColumnFilter" },
+      { field: "name", headerName: "Name", minWidth: 160, width: 160, filter: "agTextColumnFilter" },
+      { field: "email", headerName: "Email", minWidth: 220, width: 220, filter: "agTextColumnFilter" },
+      { field: "department", headerName: "Department", minWidth: 140, width: 140, filter: "agTextColumnFilter" },
+      { field: "designation", headerName: "Designation", minWidth: 170, width: 170, filter: "agTextColumnFilter" },
       {
         field: "salary",
         headerName: "Salary",
         minWidth: 130,
+        width: 130,
         filter: "agNumberColumnFilter",
         cellRenderer: SalaryCell,
       },
       {
         field: "status",
         headerName: "Status",
+        minWidth: 120,
         width: 120,
         filter: "agTextColumnFilter",
         cellRenderer: StatusBadge,
@@ -39,6 +41,7 @@ const EmployeeGrid = forwardRef(({ rowData, searchText }, ref) => {
       {
         field: "rating",
         headerName: "Rating",
+        minWidth: 110,
         width: 110,
         filter: "agNumberColumnFilter",
         cellRenderer: RatingBadge,
@@ -46,7 +49,8 @@ const EmployeeGrid = forwardRef(({ rowData, searchText }, ref) => {
       {
         field: "joinDate",
         headerName: "Join Date",
-        width: 130,
+        minWidth: 140,
+        width: 140,
         filter: "agDateColumnFilter",
         valueFormatter: (p) => {
           if (!p.value) return "";
@@ -57,7 +61,7 @@ const EmployeeGrid = forwardRef(({ rowData, searchText }, ref) => {
           });
         },
       },
-      { field: "age", headerName: "Age", width: 80, filter: "agNumberColumnFilter" },
+      { field: "age", headerName: "Age", minWidth: 90, width: 90, filter: "agNumberColumnFilter" },
     ],
     []
   );
