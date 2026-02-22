@@ -21,11 +21,11 @@ const DashboardLayout = () => {
 
   return (
     <SidebarProvider defaultOpen={false}>
-      <div className="flex min-h-screen w-full flex-col">
+      <div className="flex min-h-screen w-full flex-col overflow-x-hidden">
         <Header searchText={searchText} onSearchChange={setSearchText} />
         <div className="flex flex-1">
           <AppSidebar />
-          <main className="flex-1 space-y-6 p-4 sm:p-6">
+          <main className="flex-1 space-y-6 p-4 sm:p-6 min-w-0 overflow-x-hidden">
             <KPISection kpis={kpis} />
             <FiltersSection
               department={department}

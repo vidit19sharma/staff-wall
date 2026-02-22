@@ -77,8 +77,8 @@ const EmployeeGrid = forwardRef(({ rowData, searchText }, ref) => {
   }, []);
 
   return (
-    <div className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
-      <div className="ag-theme-alpine w-full" style={{ height: 540 }}>
+    <div className="rounded-xl border border-border bg-card shadow-sm overflow-hidden min-w-0">
+      <div className="ag-theme-alpine w-full overflow-x-auto" style={{ height: 540 }}>
         <AgGridReact
           ref={gridRef}
           rowData={rowData}
