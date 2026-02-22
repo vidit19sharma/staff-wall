@@ -122,3 +122,22 @@
 .ag-theme-alpine .ag-row {
   border-color: hsl(var(--border));
 }
+
+
+/* Mobile pagination fix */
+.ag-theme-alpine .ag-paging-panel {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+@media (max-width: 480px) {
+  .ag-theme-alpine .ag-paging-row-summary-panel {
+    display: none;
+  }
+  .ag-theme-alpine .ag-paging-panel > * {
+    margin: 0 2px;
+  }
+}
