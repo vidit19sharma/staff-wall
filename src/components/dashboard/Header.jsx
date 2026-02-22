@@ -7,7 +7,7 @@ const Header = ({ searchText, onSearchChange }) => {
       <div className="flex items-center gap-3">
         <SidebarTrigger className="text-primary-foreground hover:bg-primary-foreground/10" />
         <h1 className="text-lg font-bold tracking-tight text-primary-foreground">
-          FactWise
+          Staff Wall
         </h1>
       </div>
       <div className="relative w-48 sm:w-64">
